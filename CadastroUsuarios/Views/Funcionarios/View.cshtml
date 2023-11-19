@@ -1,0 +1,44 @@
+﻿@model CadastroUsuarios.Models.UpdateFuncionarioViewModel
+
+@{
+}
+
+<h1>Editar Funcionário</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+    <label for="" class="form-label">Id</label>
+    <input type="text" class="form-control" asp-for="Id" readonly>
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Nome</label>
+    <input type="text" class="form-control" asp-for="Nome">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Salário</label>
+    <input type="number" class="form-control" asp-for="Salario">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">E-mail</label>
+    <input type="email" class="form-control" asp-for="Email">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Senha</label>
+    <input type="text" class="form-control" asp-for="Senha">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Salário</label>
+    <input type="number" class="form-control" asp-for="Salario">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Data de Nascimento</label>
+    <input type="date" class="form-control" asp-for="DataNascimento">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Departamento</label>
+    <input type="text" class="form-control" asp-for="Departamento">
+  </div>
+
+  <button type="submit" class="btn btn-primary" asp-action="">Submit</button>
+
+  <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Funcionarios">Delete</button>
+</form>

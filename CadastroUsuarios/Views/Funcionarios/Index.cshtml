@@ -1,0 +1,39 @@
+﻿@model List<CadastroUsuarios.Models.Domain.Funcionario>
+
+@{
+}
+@*<button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Funcionarios">Adicionar novo usuário</button>
+*@
+
+<h1>Funcionários</h1>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Email</th>
+			<th>Senha</th>
+			<th>Salário</th>
+			<th>Data de Nascimento</th>
+			<th>Departamento</th>
+			<th> </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var funcionario in Model)
+		{
+			<tr>
+				<td>@funcionario.Id</td>
+				<td>@funcionario.Nome</td>
+				<td>@funcionario.Email</td>
+				<td>@funcionario.Senha</td>
+				<td>@funcionario.Salario</td>
+				<td>@funcionario.DataNascimento.ToString("dd-MM-yyyy")</td>
+				<td>@funcionario.Departamento</td>
+				<td><a href="Funcionarios/View/@funcionario.Id">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
+<a class=" btn btn-primary" asp-action="Add" asp-controller="Funcionarios">Adicionar novo usuário</a>
